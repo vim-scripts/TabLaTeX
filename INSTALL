@@ -1,0 +1,7 @@
+Installing TabLaTeX 0.1
+-----------------------
+
+Just run the "install.sh" script. It will copy the plugin to
+~/.vim/ftplugin/tex
+
+

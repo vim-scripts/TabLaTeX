@@ -1,0 +1,188 @@
+<html>
+<head><title>TabLaTex 1 documentation</title></head>
+<body>
+
+<h1>TabLaTeX 1 documentation</h1>
+
+Pedro Diaz (<a href="mailto: tablatex@cavecanen.org">tablatex@cavecanen.org</a>)<br>
+October 2004<br>
+
+<h2>Introduction</h2>
+
+<p>
+TabLaTex is a plugin for writing LaTeX documents with the <a href="http://www.vim.org">Vim editor</a>. The
+philosophy behind TabLaTeX is to imitate the tab-completion behaviour of some unix shells (namely the
+bash shell). 
+</p>
+<p>
+TabLaTeX is a simple plugin for people who don't want to be bothered learning complex 
+key-binding schemes from more complicated (and complete) LaTeX vim plugins. TabLaTeX is supposed to easy to
+learn and easy to use (i.e.: all the key-bindings "make sense", at least to me). 
+</p>
+
+<h2>Installation</h2>
+Copy the <tt>tablatex.vim</tt> file to <tt>~/.vim/ftplugin/tex/</tt>. Alternatively you can use the <tt>install.sh</tt>
+script.
+
+
+
+<h2>Editing LaTeX documents with TabLaTeX</h2>
+
+<h3>Tab-completion (insertion mode) commands</h3>
+<p>
+Most of the TabLaTeX commands are based on tab completion. You will notice that, while writing your text, some
+keys produce a small delay (for example, pressing 'b'). Don't worry about that, just continue writing as usual. 
+</p>
+
+<p>
+Now lets say that you would like to put some text in boldface. Instead of writing <tt>\textbf{</tt> type
+<tt>b&lt;TAB &gt;</tt> (that means to press the b key, release it and then press the TAB key); you should end
+with the text <tt>\textbf{}</tt>, and the cursor inside the braces. You have just executed a tab-completion command,
+congratulations!
+</p>
+
+
+<p>
+Here is the list of the tab-completion commands available in TabLaTeX:
+
+<center>
+<table border="1" width="80%">
+<tr align="left">
+<th width="30%">Command + <tt>&lt;TAB&gt;</tt></th> <th width="70%">Description</th>
+</tr>
+
+<tr>
+<td>b</td> <td>Boldface, <tt>\textbf{}</tt></td>
+</tr>
+
+<tr>
+<td>i</td> <td>Italic, <tt>\textit{}</tt></td>
+</tr>
+
+
+<tr>
+<td>s</td> <td>Smallcaps, <tt>\textsc{}</tt></td>
+</tr>
+
+
+<tr>
+<td>v</td> <td>Verbatim (one line), <tt>\verb++</tt></td>
+</tr>
+
+
+<tr>
+<td>V</td> <td>Verbatim, environment,<br> <tt>\begin{verbatim}</tt><br><tt>\end{verbatim}</tt></td>
+</tr>
+
+
+<tr>
+<td>t</td> <td>Typewriter, <tt>\texttt{}</tt></td>
+</tr>
+
+<tr>
+<td>_</td> <td>Underline, <tt>\underline{}</tt></td>
+</tr>
+
+<tr>
+<td>m</td> <td>Inline math mode, <tt>$ $</tt></td>
+</tr>
+
+<tr>
+<td>I</td> <td>Itemize,<br><tt>\begin{itemize}</tt><br><tt>\end{itemize}</tt></td>
+</tr>
+
+<tr>
+<td>E</td> <td>Enumerate,<br><tt>\begin{enumerate}</tt><br><tt>\end{enumerate}</tt></td>
+</tr>
+
+<tr>
+<td>p</td> <td>Item, <tt>\item{}</tt></td>
+</tr>
+
+<tr>
+<td>T</td> <td>Tabular,<br><tt>\begin{tabular}{}<br><tt>\end{tabular}</tt></td>
+</tr>
+
+<tr>
+<td>-</td> <td>Horizontal line, <tt>\hline</tt></td> 
+</tr>
+
+<tr>
+<td>L</td> <td>Flushleft, <br><tt>\begin{flushleft}</tt><br><tt>\end{flushleft}</tt></td>
+</tr>
+
+<tr>
+<td>L</td> <td>Flushright, <br><tt>\begin{flushright}</tt><br><tt>\end{flushright}</tt></td>
+</tr>
+
+<tr>
+<td>C</td> <td>Center, <br><tt>\begin{center}</tt><br><tt>\end{center}</tt></td>
+</tr>
+
+
+<tr>
+<td>N</td> <td>New environment. The name of the environment is asked in the input line of vim</td> 
+</tr>
+
+<tr>
+<td>*</td> <td>Insert image, <tt>\includegraphics[width=cm]{}</tt></td>
+</tr>
+
+
+<tr>
+<td>}</td> <td>Move outside a braces delimited section (right)</td>
+<tr>
+
+<tr>
+<td>{</td> <td>Move outside a braces delimited section (left)</td>
+</tr>
+
+
+<tr>
+<td>]</td> <td>Move to the end of the current environment</td>
+</tr>
+
+<tr>
+<td>[</td> <td>Move to the beginning of the current environment</td>
+</tr>
+
+
+</table>
+</center>
+
+<h3>Command mode commands</h3>
+<p>
+The commands <b>b,i,s,v,t,_,",L,R,C</b> have a command mode counterpart that can be accessed with <tt>Control-C command_key
+</tt>. The 
+command will be applied to the word/line (depending of the command) under the cursor.
+</p>
+
+<p>
+So, for example, say you want to put the word under the cursor in boldface. Just switch to command mode (<tt>ESC</tt>)
+and press <tt>Control-C b</tt>
+</p>
+
+<h3>Other commands</h3>
+<ul>
+<li><b>Double quotes:</b> To put double quotes in the LaTeX style (<tt>``example''</tt>) just type <tt>"</tt> while
+in insertion mode. If you want to write the <tt>"</tt> character, type <tt>\"</tt></li>
+
+<li><b>Commenting blocks of text:</b> To comment a block of text select it in visual mode and press <tt>%</tt></li>
+
+</ul>
+
+
+
+<h2>Comments and questions</h2>
+<p>
+If you have any comments or suggestions about TabLaTeX send me an email to <a href="mailto:tablatex@cavecanen.org">
+tablatex@cavecanen.org</a>. 
+</p>
+
+<p>
+I don't plan to update a lot TabLaTeX, simply because it suits my needs enough. Anyways, all news and updates
+concerning this plugin will we at <a href="http://www.cavecanen.org/latex/tablatex/">http://www.cavecanen.org/latex/tablatex/</a>
+</p>
+
+</body>
+</html>

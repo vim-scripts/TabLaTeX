@@ -1,0 +1,5 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=1095
+
+TabLaTeX is a small and very simple Vim 6.x plugin that eases editing LaTeX documents. The script is focused on fast editing and not in completeness, so only the most used features of LaTeX are supported. You might find interesting that most commands are inspired in the tab-completion feature of the bash shell.
+
+Homepage: http://www.cavecanen.org/latex/tablatex/
