@@ -1,8 +1,8 @@
 <html>
-<head><title>TabLaTex 1 documentation</title></head>
+<head><title>TabLaTex 1.1 documentation</title></head>
 <body>
 
-<h1>TabLaTeX 1 documentation</h1>
+<h1>TabLaTeX 1.1 documentation</h1>
 
 Pedro Diaz (<a href="mailto: tablatex@cavecanen.org">tablatex@cavecanen.org</a>)<br>
 October 2004<br>
@@ -112,7 +112,7 @@ Here is the list of the tab-completion commands available in TabLaTeX:
 </tr>
 
 <tr>
-<td>L</td> <td>Flushright, <br><tt>\begin{flushright}</tt><br><tt>\end{flushright}</tt></td>
+<td>R</td> <td>Flushright, <br><tt>\begin{flushright}</tt><br><tt>\end{flushright}</tt></td>
 </tr>
 
 <tr>
@@ -151,6 +151,8 @@ Here is the list of the tab-completion commands available in TabLaTeX:
 </center>
 
 <h3>Command mode commands</h3>
+
+<h4> Change commands</h4>
 <p>
 The commands <b>b,i,s,v,t,_,",L,R,C</b> have a command mode counterpart that can be accessed with <tt>Control-C command_key
 </tt>. The 
@@ -162,12 +164,28 @@ So, for example, say you want to put the word under the cursor in boldface. Just
 and press <tt>Control-C b</tt>
 </p>
 
+<h4>Movement commands</h4>
+<p>
+The commands <b>[</b> and <b>]</b> move to the beginning and end of an environment, respectively.
+</p>
+
+<h4>Environment folding</h4>
+<p>
+TabLaTeX 1.1 has limited support for foldings. When inside of an environment you can fold its contents
+with <b>e&lt;</b>. You can unfold a folded environment with <b>e&gt;</b>
+</p>
+
+
 <h3>Other commands</h3>
 <ul>
 <li><b>Double quotes:</b> To put double quotes in the LaTeX style (<tt>``example''</tt>) just type <tt>"</tt> while
 in insertion mode. If you want to write the <tt>"</tt> character, type <tt>\"</tt></li>
 
 <li><b>Commenting blocks of text:</b> To comment a block of text select it in visual mode and press <tt>%</tt></li>
+
+
+<li><b>Compiling and viewing:</b> If you press the F5 key an xterm will be lauched with the command 'make clean all'. 
+Pressing F9 executes the command 'gv *.ps'</li>
 
 </ul>
 
